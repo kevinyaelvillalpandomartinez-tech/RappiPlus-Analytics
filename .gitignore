@@ -19,3 +19,7 @@ Thumbs.db
 
 # VS Code local settings
 .vscode/
+
+# Raw datasets
+data/raw/*.csv
+data/raw/*.zip
