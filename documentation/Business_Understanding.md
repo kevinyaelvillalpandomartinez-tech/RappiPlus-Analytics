@@ -1,94 +1,135 @@
-# Business Understanding
+# E-commerce Customer Journey & Conversion Analysis
+
+## Business Understanding
 
 ## 1. Business Context
 
-RappiPlus is a fictional digital commerce platform where customers interact with the platform through different acquisition channels and progress through a digital purchase journey.
+This project analyzes real-world behavioral data from an online cosmetics store. The dataset contains customer interactions recorded across the e-commerce journey, including product views, cart additions, cart removals, and purchases.
 
-The company collects behavioral and transactional data from customer interactions, including visits, product engagement, purchases, acquisition channels, and customer activity over time.
+Each event provides information about the customer interaction, including the event timestamp, product, category, brand, price, user, and browsing session.
 
-As the platform grows, the business needs to better understand how customers move through the conversion funnel, which acquisition channels generate valuable customers, what factors influence conversion and retention, and where opportunities exist to improve the customer journey.
+Understanding how customers move through the digital shopping journey is important for identifying friction points, measuring conversion performance, and understanding purchasing behavior.
 
-The purpose of this project is to use data analytics to transform customer behavior and transactional data into actionable insights that can support product, marketing, and business decisions.
+The purpose of this project is to analyze customer behavior across the e-commerce journey and transform behavioral and transactional data into actionable insights that can support decisions related to conversion, customer experience, product performance, and customer retention.
+
 
 ## 2. Business Problem
 
-RappiPlus needs to understand the key differences between customers who complete a purchase and those who do not. The company also needs to identify which acquisition channels generate the most valuable customers.
+The e-commerce business needs to understand how customers move through the digital purchase journey and identify where potential customers fail to progress toward a purchase.
+
+The business also needs to understand which products, categories, and brands demonstrate stronger or weaker purchasing behavior, as well as whether customers return to make additional purchases over time.
+
+Without a clear understanding of these behavioral patterns, it is difficult to identify opportunities to improve conversion performance, customer experience, and customer retention.
+
+
 
 ## 3. Business Objectives
 
 The analysis aims to:
 
-1. Analyze customer behavior to identify patterns associated with completing or abandoning the purchase process.
+1. Analyze the customer journey from product view to purchase and measure how users progress through the conversion funnel.
 
-2. Evaluate acquisition channels to determine which channels generate customers with stronger conversion and business value.
+2. Identify the stages of the customer journey with the highest drop-off rates and potential friction points.
 
-3. Analyze customer retention and value to understand whether customers continue purchasing over time and identify the characteristics of higher-value customers.
+3. Compare purchasing behavior across products, categories, and brands to identify differences in conversion and commercial performance.
 
+4. Analyze repeat-purchase behavior and customer retention over time.
+
+5. Perform cohort analysis to understand how purchasing and retention behavior changes across customer groups over time.
 ## 4. Business Questions
 
-### Customer Behavior
 
-- What characteristics differentiate customers who complete a purchase from those who abandon the purchase process?
 
-### Acquisition Channels
+### Customer Journey & Conversion
 
-- Which acquisition channels generate the highest conversion rates?
-- Which acquisition channels generate the lowest conversion rates?
+- How do users progress from product views to cart additions and purchases?
+- What is the overall conversion rate from product view to purchase?
+- At which stage of the customer journey does the highest drop-off occur?
 
-### Customer Retention and Value
+### Product Performance
 
-- What percentage of customers return to make another purchase after their first purchase?
-- How does customer retention change over time?
+- Which products, categories, and brands generate the highest number of purchases?
+- Which products, categories, and brands demonstrate stronger conversion performance?
+- Which products or brands generate the highest purchase revenue?
 
+### Customer Purchasing Behavior
+
+- How many customers make repeat purchases?
+- What percentage of purchasing customers return to make another purchase?
+- How does purchasing frequency vary across customers?
+
+### Customer Retention & Cohorts
+
+- How does customer retention change over time after a customer's first purchase?
+- Which customer cohorts demonstrate stronger retention behavior?
+- How does purchasing behavior differ between customer cohorts?
 ## 5. Key Performance Indicators (KPIs)
 
-The following KPIs will be used to evaluate customer behavior, funnel performance, acquisition channels, and customer retention.
 
-### Conversion Rate
 
-Measures the percentage of customers who complete a desired action, such as completing a purchase.
+The following KPIs will be used to evaluate customer journey performance, purchasing behavior, and customer retention.
 
-**Formula:**
+### 1. View-to-Cart Conversion Rate
 
-Conversion Rate = (Customers Who Purchased / Total Customers) × 100
-
-### Drop-off Rate
-
-Measures the percentage of customers who do not progress from one stage of the conversion funnel to the next.
+Measures the percentage of users who progress from viewing a product to adding a product to their cart.
 
 **Formula:**
 
-Drop-off Rate = ((Customers in Previous Stage - Customers in Next Stage) / Customers in Previous Stage) × 100
+View-to-Cart Conversion Rate = (Users Who Add to Cart / Users Who View Products) × 100
 
-### Customer Retention Rate
+### 2. View-to-Purchase Conversion Rate
 
-Measures the percentage of customers who return and make another purchase after their first purchase.
-
-**Formula:**
-
-Customer Retention Rate = (Customers Who Returned / Customers Who Made Their First Purchase) × 100
-
-### Average Revenue per Customer
-
-Measures the average amount of revenue generated by each customer.
+Measures the percentage of users who progress from viewing products to completing a purchase.
 
 **Formula:**
 
-Average Revenue per Customer = Total Revenue / Total Customers
+View-to-Purchase Conversion Rate = (Users Who Purchase / Users Who View Products) × 100
+
+### 3. Funnel Drop-off Rate
+
+Measures the percentage of users who fail to progress from one stage of the customer journey to the next.
+
+**Formula:**
+
+Drop-off Rate = ((Users in Previous Stage - Users in Next Stage) / Users in Previous Stage) × 100
+
+### 4. Purchase Revenue
+
+Measures the total revenue generated by purchase events.
+
+**Formula:**
+
+Purchase Revenue = Sum of Price for Purchase Events
+
+### 5. Repeat Purchase Rate
+
+Measures the percentage of purchasing customers who make more than one purchase over the analysis period.
+
+**Formula:**
+
+Repeat Purchase Rate = (Customers With Repeat Purchases / Total Purchasing Customers) × 100
+
+### 6. Customer Retention Rate
+
+Measures the percentage of customers from a cohort who return and make a purchase in subsequent periods.
+
+**Formula:**
+
+Customer Retention Rate = (Returning Customers in Period / Customers in Original Cohort) × 100
 
 ## 6. Stakeholders
 
 ### Product Team
 
-The Product Team can use the analysis to identify friction points in the customer journey, understand where customers abandon the conversion funnel, and prioritize improvements to the purchasing experience.
+The Product Team can use the analysis to understand how users move through the customer journey, identify stages with high drop-off rates, and detect potential friction points in the purchasing process.
 
-### Marketing Team
+### E-commerce / Commercial Team
 
-The Marketing Team can use the analysis to evaluate acquisition channel performance, identify which channels generate higher conversion rates and customer value, and improve customer acquisition strategies.
+The E-commerce and Commercial Team can use product, category, brand, and revenue analysis to identify differences in purchasing performance and support commercial decisions.
 
 ### Customer Retention / CRM Team
 
-The Customer Retention / CRM Team can use retention and cohort analysis to understand repeat-purchase behavior, identify valuable customer groups, and develop strategies to increase customer retention over time.
+The Customer Retention and CRM Team can use repeat-purchase, retention, and cohort analysis to understand whether customers return after their first purchase and identify customer groups with stronger retention behavior.
 
 ## 7. Project Scope
 
@@ -96,21 +137,24 @@ The Customer Retention / CRM Team can use retention and cohort analysis to under
 
 This project will focus on:
 
-- Analyzing customer behavior throughout the digital purchase journey.
-- Measuring conversion and drop-off rates across funnel stages.
-- Comparing customer acquisition channels based on conversion performance and customer value.
-- Analyzing repeat-purchase behavior and customer retention over time.
-- Performing cohort analysis to evaluate retention patterns.
-- Evaluating an A/B test to determine whether changes to the checkout experience are associated with differences in conversion.
-- Using SQL to answer business questions and validate analytical findings.
-- Developing an interactive Power BI dashboard to communicate key insights and KPIs.
+- Analyzing customer behavior across the e-commerce purchase journey.
+- Measuring customer progression from product views to cart additions and purchases.
+- Calculating conversion and drop-off rates across funnel stages.
+- Analyzing purchasing performance across products, categories, and brands.
+- Measuring purchase revenue and customer purchasing frequency.
+- Identifying repeat-purchase behavior.
+- Performing cohort analysis to evaluate customer retention over time.
+- Using Python for data cleaning, exploratory analysis, behavioral analysis, and cohort analysis.
+- Using PostgreSQL and SQL to answer business questions and validate analytical findings.
+- Developing an interactive Power BI dashboard to communicate key KPIs and insights.
 
 ### Out of Scope
 
-The project will not focus on:
+This project will not focus on:
 
+- Acquisition channel analysis, because acquisition source data is not available in the dataset.
+- A/B testing or experimentation, because the dataset does not contain experimental groups.
 - Predictive machine learning models.
-- Real-time analytics or streaming data.
 - Recommendation systems.
+- Real-time analytics or streaming data.
 - Customer-level marketing automation.
-- Production deployment of analytical models.
